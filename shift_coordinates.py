@@ -8,7 +8,7 @@ def shift_coordinates(inp, out, shift):
                 continue
             for i in range(1, len(row)):
                 row[i] = float(row[i])
-                row[i] += shift
+                row[i] += shift[i-1]
         with open(out, "w") as f:
             writer = csv.writer(f, delimiter=" ")
             writer.writerows(file)
